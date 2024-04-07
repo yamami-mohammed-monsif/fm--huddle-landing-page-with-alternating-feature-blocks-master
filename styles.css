@@ -1,0 +1,291 @@
+:root {
+
+    --clr-primary-pink : hsl(322, 100%, 66%);
+
+    --clr-neutral-200: hsl(193, 100%, 96%);
+    --clr-neutral-300: hsl(208, 11%, 55%);
+    --clr-neutral-700: hsl(192, 100%, 9%);
+
+    --ff-body: "Open Sans", sans-serif;
+    --ff-headings: "Poppins", sans-serif;
+
+    --fs-200: 0.75rem;
+    --fs-300: 0.9rem;
+    --fs-400: 1.0625rem;
+
+    --fw-body: 400;
+    --fw-headings: 600;
+
+    --element-spacing: 1.5rem;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+    font-family: var(--ff-body);
+    font-size: var(--fs-400);
+    font-weight: var(--fw-body);
+    text-align: center;
+}
+
+h1, h2 {
+    line-height: 1.1;
+    font-family: var(--ff-headings);
+    font-weight: var(--fw-headings);
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+    width: 85%;
+    margin-inline: auto;
+    padding-block: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    font-size: var(--fs-300);
+    font-weight: var(--fw-headings);
+}
+
+a:hover {
+    opacity: 70%;
+}
+
+
+/* ********************************************************* */
+/* header */
+/* ********************************************************* */
+
+header {
+    background-image: url(images/bg-hero-mobile.svg);
+    background-color: var(--clr-neutral-200);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.nav_btn {
+    border-radius: 100px;
+    padding: .2rem 1rem;
+    background-color: white;
+    box-shadow: 2px 2px 6px rgb(201, 196, 196);
+}
+
+.main_logo {
+    width: 7rem;
+}
+
+h1 {
+    font-size: 1.6rem;
+}
+
+.col > * + * {
+    margin-top: var(--element-spacing);
+}
+
+.btn {
+    background-color: var(--clr-primary-pink);
+    color: white;
+    border-radius: 100px;
+    width: 85%;
+    margin-inline: auto;
+    padding-block: .5rem;
+    margin-bottom: 2.5rem;
+}
+
+
+/* ********************************************************* */
+/* main */
+/* ********************************************************* */
+
+main {
+    color: var(--clr-neutral-300);
+    padding-bottom: 6rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.card {
+    padding: 1.5em;
+    margin-bottom: var(--element-spacing);
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    margin-top: var(--element-spacing);
+    padding-bottom: var(--element-spacing);
+}
+
+
+/* ********************************************************* */
+/* footer */
+/* ********************************************************* */
+
+footer {
+    background-color: var(--clr-neutral-700);
+    color: var(--clr-neutral-300);
+    text-align: left;
+}
+
+footer a {
+    font-weight: inherit;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.prompt {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: white;
+    margin-top: -7rem;
+    margin-bottom: 3rem;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+.prompt .btn {
+    margin-top: 1.3rem;
+    margin-bottom: 0;
+    margin-inline: auto;
+}
+
+.footer_logo {
+    width: 10rem;
+}
+
+.location, .phone, .email {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.5rem;
+}
+
+.location img {
+    margin-top: 0.4rem;
+    margin-right: 0.5rem;
+}
+
+.email {
+    margin-bottom: 1.5rem;
+}
+
+.social {
+    text-align: center;
+}
+
+.icon {
+    margin-inline: auto;
+    border: solid 1px ;
+    border-radius: 50%;
+    padding: 0.35rem;
+}
+
+.icon:hover {
+    color: var(--clr-primary-pink);
+    border-color: var(--clr-primary-pink);
+    cursor: pointer;
+}
+
+.social > * {
+    margin-inline: 0.2rem;
+}
+
+.Copyright {
+    text-align: center;
+    font-size: var(--fs-200);
+    font-weight: var(--fw-headings);
+    margin-top: 1rem;
+}
+
+/* ********************************************************* */
+/* media quiries */
+/* ********************************************************* */
+
+
+@media (min-width: 769px) {
+
+    body {
+        text-align: left;
+    }
+
+    .container {
+        max-width: 950px;
+    }
+
+    .btn {
+        margin-inline: 0;
+        width: 50%;
+        text-align: center;
+    }
+
+    .flex {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    main .flex {
+        gap: 4rem;
+    }
+
+    .prompt {
+        width: 70%;
+        margin-inline: auto;
+    }
+
+
+
+
+    .flex_footer {
+        display: flex;
+        align-items: center;
+        gap: 6rem;
+    }
+
+    .flex_footer > * {
+        flex: 1;
+    }
+
+    .social {
+        text-align: left;
+    }
+
+    .flex_footer > :nth-child(2) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .flex_footer > :nth-child(2) > * {
+        margin-top: 0;
+    }
+
+    .links > * {
+        margin-bottom: 1rem;
+    }
+
+    .Copyright {
+        text-align: right;
+    }
+}
